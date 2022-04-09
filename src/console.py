@@ -1,12 +1,14 @@
-from functions import timer, sleep, validTime, sleepOntimer
+from functions import getValidTime, sleepOntimer
 from Timing import Timing
 
-inp = input('Please insert time in the formt of \"hh::mm:ss\": ')
+def takeInput() -> str:
+    return input('Please insert time in the formt of \"hh::mm:ss\": ')
 
-while not validTime(inp):
+timing = getValidTime(takeInput())
+
+
+while not timing:
     print('Wrong time!!')
-    inp = input('Please insert time in the formt of \"hh::mm:ss\": ')
+    timing = getValidTime(takeInput())
 
-h, m, s = map(int, inp.split(':'))
-t = Timing(s, m, h)
-sleepOntimer(t,True)
+sleepOntimer(timing,True)

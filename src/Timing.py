@@ -13,13 +13,13 @@ class Timing:
         return (self.__totalTime%3600)%60
 
     def setSeconds(self,value: int = 0 ) -> None:
-        self.__totalTime += -self.getSeconds()+self.__inRange(60, value)
+        self.__totalTime += -self.getSeconds()+self.__inRange(59, value)
 
     def getMinutes(self) -> int:
         return (self.__totalTime%3600)//60
 
     def setMinutes(self,value: int = 0 ) -> None:
-        self.__totalTime += (-self.getMinutes()*60)+(self.__inRange(60, value)*60)
+        self.__totalTime += (-self.getMinutes()*60)+(self.__inRange(59, value)*60)
 
     def getHours(self) -> int:
         return self.__totalTime//3600
