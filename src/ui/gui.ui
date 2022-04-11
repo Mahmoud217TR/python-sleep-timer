@@ -6,27 +6,38 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>405</width>
-    <height>504</height>
+    <width>387</width>
+    <height>607</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>405</width>
-    <height>504</height>
+    <width>387</width>
+    <height>607</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>405</width>
-    <height>504</height>
+    <width>387</width>
+    <height>607</height>
    </size>
   </property>
   <property name="windowTitle">
    <string>Sleep Timer</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normalon>../artwork/Icon.ico</normalon>
+   </iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: qlineargradient(spread:pad, x1:0.98, y1:0.994682, x2:0, y2:0, stop:0 rgba(38, 72, 99, 255), stop:1 rgba(255, 255, 255, 255));</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QGridLayout" name="gridLayout">
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2">
     <item row="0" column="0">
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
@@ -37,6 +48,10 @@
           <pointsize>42</pointsize>
          </font>
         </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(23, 44, 61);
+background-color: rgba(255, 255, 255, 0);</string>
+        </property>
         <property name="text">
          <string>Sleep Timer</string>
         </property>
@@ -46,59 +61,63 @@
        </widget>
       </item>
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
         <item>
-         <widget class="QLCDNumber" name="hoursLcd">
-          <property name="minimumSize">
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
            <size>
-            <width>100</width>
-            <height>50</height>
+            <width>40</width>
+            <height>20</height>
            </size>
           </property>
-          <property name="font">
-           <font>
-            <pointsize>16</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color:red;</string>
-          </property>
-          <property name="smallDecimalPoint">
-           <bool>false</bool>
-          </property>
-          <property name="digitCount">
-           <number>2</number>
-          </property>
-          <property name="segmentStyle">
-           <enum>QLCDNumber::Filled</enum>
-          </property>
-          <property name="value" stdset="0">
-           <double>0.000000000000000</double>
-          </property>
-         </widget>
+         </spacer>
         </item>
         <item>
-         <widget class="QLabel" name="lcdSeperator1">
-          <property name="font">
-           <font>
-            <family>Segoe UI</family>
-            <pointsize>16</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color:red;</string>
+         <widget class="QLabel" name="logoLabel">
+          <property name="maximumSize">
+           <size>
+            <width>126</width>
+            <height>126</height>
+           </size>
           </property>
           <property name="text">
-           <string>:</string>
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap>../artwork/Logo.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
           </property>
+          <property name="indent">
+           <number>-2</number>
+          </property>
          </widget>
         </item>
         <item>
+         <spacer name="horizontalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="2">
          <widget class="QLCDNumber" name="minutesLcd">
           <property name="minimumSize">
            <size>
@@ -114,7 +133,8 @@
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">color:red;</string>
+           <string notr="true">color: rgb(218, 105, 49);
+background-color: rgb(255, 255, 255);</string>
           </property>
           <property name="frameShape">
            <enum>QFrame::Box</enum>
@@ -123,7 +143,7 @@
            <enum>QFrame::Raised</enum>
           </property>
           <property name="lineWidth">
-           <number>1</number>
+           <number>2</number>
           </property>
           <property name="smallDecimalPoint">
            <bool>false</bool>
@@ -139,8 +159,8 @@
           </property>
          </widget>
         </item>
-        <item>
-         <widget class="QLabel" name="lcdSeperator2">
+        <item row="0" column="1">
+         <widget class="QLabel" name="lcdSeperator1">
           <property name="font">
            <font>
             <family>Segoe UI</family>
@@ -150,7 +170,7 @@
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">color:red;</string>
+           <string notr="true">color: rgb(218, 105, 49);</string>
           </property>
           <property name="text">
            <string>:</string>
@@ -160,7 +180,41 @@
           </property>
          </widget>
         </item>
-        <item>
+        <item row="0" column="0">
+         <widget class="QLCDNumber" name="hoursLcd">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(218, 105, 49);
+background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="lineWidth">
+           <number>2</number>
+          </property>
+          <property name="smallDecimalPoint">
+           <bool>false</bool>
+          </property>
+          <property name="digitCount">
+           <number>2</number>
+          </property>
+          <property name="segmentStyle">
+           <enum>QLCDNumber::Filled</enum>
+          </property>
+          <property name="value" stdset="0">
+           <double>0.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4">
          <widget class="QLCDNumber" name="secondsLcd">
           <property name="minimumSize">
            <size>
@@ -174,7 +228,11 @@
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">color:red;</string>
+           <string notr="true">color: rgb(218, 105, 49);
+background-color: rgba(255, 255, 255);</string>
+          </property>
+          <property name="lineWidth">
+           <number>2</number>
           </property>
           <property name="smallDecimalPoint">
            <bool>false</bool>
@@ -190,17 +248,18 @@
           </property>
          </widget>
         </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_2">
-        <item>
+        <item row="1" column="0">
          <widget class="QLabel" name="hoursLabel">
           <property name="font">
            <font>
             <family>Segoe UI</family>
             <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(23, 44, 61);</string>
           </property>
           <property name="text">
            <string>Hours</string>
@@ -210,62 +269,8 @@
           </property>
          </widget>
         </item>
-        <item>
-         <widget class="QLabel" name="minutesLabel">
-          <property name="font">
-           <font>
-            <family>Segoe UI</family>
-            <pointsize>16</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>Minutes</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="secondsLabel">
-          <property name="font">
-           <font>
-            <family>Segoe UI</family>
-            <pointsize>16</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>Seconds</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout">
-        <item>
-         <widget class="QSpinBox" name="hoursBox">
-          <property name="font">
-           <font>
-            <pointsize>16</pointsize>
-           </font>
-          </property>
-          <property name="layoutDirection">
-           <enum>Qt::LeftToRight</enum>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-          <property name="maximum">
-           <number>24</number>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="seperator1">
+        <item row="0" column="3">
+         <widget class="QLabel" name="lcdSeperator2">
           <property name="font">
            <font>
             <family>Segoe UI</family>
@@ -273,6 +278,9 @@
             <weight>75</weight>
             <bold>true</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(218, 105, 49);</string>
           </property>
           <property name="text">
            <string>:</string>
@@ -282,12 +290,80 @@
           </property>
          </widget>
         </item>
-        <item>
+        <item row="1" column="4">
+         <widget class="QLabel" name="secondsLabel">
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(23, 44, 61);</string>
+          </property>
+          <property name="text">
+           <string>Seconds</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLabel" name="minutesLabel">
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(23, 44, 61);</string>
+          </property>
+          <property name="text">
+           <string>Minutes</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QSpinBox" name="hoursBox">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(23, 44, 61);
+background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="maximum">
+           <number>24</number>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
          <widget class="QSpinBox" name="minutesBox">
           <property name="font">
            <font>
             <pointsize>16</pointsize>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(23, 44, 61);
+background-color: rgb(255, 255, 255);</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -297,7 +373,29 @@
           </property>
          </widget>
         </item>
-        <item>
+        <item row="2" column="4">
+         <widget class="QSpinBox" name="secondsBox">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(23, 44, 61);
+background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="readOnly">
+           <bool>false</bool>
+          </property>
+          <property name="maximum">
+           <number>59</number>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
          <widget class="QLabel" name="seperator2">
           <property name="font">
            <font>
@@ -315,86 +413,108 @@
           </property>
          </widget>
         </item>
-        <item>
-         <widget class="QSpinBox" name="secondsBox">
+        <item row="2" column="1">
+         <widget class="QLabel" name="seperator1">
           <property name="font">
            <font>
+            <family>Segoe UI</family>
             <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(23, 44, 61);</string>
+          </property>
+          <property name="text">
+           <string>:</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
-          </property>
-          <property name="maximum">
-           <number>59</number>
           </property>
          </widget>
         </item>
        </layout>
       </item>
-     </layout>
-    </item>
-    <item row="1" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout_4">
       <item>
-       <spacer name="horizontalSpacer_2">
+       <spacer name="verticalSpacer">
         <property name="orientation">
-         <enum>Qt::Horizontal</enum>
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
         </property>
         <property name="sizeHint" stdset="0">
          <size>
-          <width>40</width>
-          <height>20</height>
+          <width>20</width>
+          <height>40</height>
          </size>
         </property>
        </spacer>
       </item>
       <item>
-       <widget class="QPushButton" name="submitButton">
-        <property name="minimumSize">
-         <size>
-          <width>100</width>
-          <height>99</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>100</width>
-          <height>99</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <family>Segoe UI</family>
-          <pointsize>18</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color:white;
-background-color:red;</string>
-        </property>
-        <property name="text">
-         <string>Start</string>
-        </property>
-        <property name="default">
-         <bool>false</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <spacer name="horizontalSpacer">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="submitButton">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>99</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>100</width>
+            <height>99</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+            <pointsize>18</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(23, 44, 61);
+background-color: rgb(230, 179, 61);</string>
+          </property>
+          <property name="text">
+           <string>Start</string>
+          </property>
+          <property name="default">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
       </item>
      </layout>
     </item>
@@ -405,9 +525,12 @@ background-color:red;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>405</width>
+     <width>387</width>
      <height>26</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
    </property>
    <widget class="QMenu" name="menuAbout">
     <property name="title">
@@ -417,7 +540,11 @@ background-color:red;</string>
    </widget>
    <addaction name="menuAbout"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+   </property>
+  </widget>
   <action name="actionGitHub">
    <property name="checkable">
     <bool>false</bool>
