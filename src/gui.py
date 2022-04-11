@@ -120,6 +120,8 @@ class Ui_MainWindow(object):
         
         # setup UI
         self.components(MainWindow)
+        self.logoLabel.setPixmap(QtGui.QPixmap("artwork/Logo.png"))
+
 
         # Actions
         self.submitButton.clicked.connect(self.buttonPressed)
