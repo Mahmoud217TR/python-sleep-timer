@@ -2,7 +2,7 @@ from functions import getValidTime, sleepOntimer
 from Timing import Timing
 
 def takeInput() -> str:
-    return input('Please insert time in the formt of \"hh::mm:ss\": ')
+    return input('Please insert a time in the formt of \"hh:mm:ss\": ')
 
 timing = getValidTime(takeInput())
 
