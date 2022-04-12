@@ -51,7 +51,8 @@ To use the console option you have 2 ways:
 
 This is a **lot larger** in size because of pyqt5 package.
 
-Here we have also 2 methods:
+Here we have 3 methods:
+* Run the executable file `setup.exe` and install the program, you will find a shortcut on the desktop named `Sleep Timer` you can run it.
 * Unzip `gui.rar` then run the executable file inside the unziped folder called `gui.exe`.
 * Open the command Prompt in `src` directory, then run this command `python gui.py` **(requires [PyQt5](https://pypi.org/project/PyQt5) package)**.
 
